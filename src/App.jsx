@@ -20,14 +20,16 @@ function App() {
   const [animals, setAnimals] = useState([]);
   const [count, setCount] = useState(0);
 
-  function handleClick() {
+  const handleClick = () => {
     setAnimals([...animals, getRandomAnimal()]);
     setCount(count + 1);
-  }
+    console.log(animals);
+  };
 
-  const renderedAnimals = animals.map((animal, index) => {
-    return <AnimalShow type={animal} key={index} />;
-  });
+  const renderedAnimals = animals.map((animal, index) => (
+    <AnimalShow type={animal} key={index} />
+  ));
+
   return (
     <div>
       <button onClick={handleClick}>Click here to generate an animal</button>
