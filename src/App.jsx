@@ -1,6 +1,7 @@
 "use strict";
 import AnimalShow from "./AnimalShow";
 import { useState } from "react";
+import "./css/app.css";
 
 import bird from "./svg/bird.svg";
 import cat from "./svg/cat.svg";
@@ -34,10 +35,10 @@ function App() {
   ));
 
   return (
-    <div>
+    <div className="app">
       <button onClick={handleClick}>Click here to generate an animal</button>
-      <p>Number of animals: {count}</p>
-      <h1>{renderedAnimals}</h1>
+      <p>Number of animals: {animalCount}</p>
+      <div className="animal-list">{renderedAnimals}</div>
     </div>
   );
 }
