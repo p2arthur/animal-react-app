@@ -16,8 +16,12 @@ const svgMap = {
   horse,
 };
 
+//Function for the AnimalShow component
 function AnimalShow({ type }) {
+  //Setting a piece of state to count the clicks on the div containing the animal img
   const [clicks, setClicks] = useState(0);
+
+  //Click handler to update the clicks counter using the setClicks setter - The clicks count will make the heart image bigger
   const handleClick = () => {
     setClicks(clicks + 1);
   };
